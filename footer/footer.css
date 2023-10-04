@@ -1,0 +1,124 @@
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideInFromTop {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+footer {
+  background: linear-gradient(to bottom, cornflowerblue, #8db5e0);
+  color: wheat;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+    text-align:left;
+    animation: slideInFromLeft 2s;
+}
+
+.footer-logo h1 {
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.footer-logo p {
+    font-size:29px;
+}
+
+.footer-contact {
+    text-align:left;
+    animation: slideInFromTop 2s;
+}
+
+.footer-navigation,
+.footer-contact {
+    margin:20px;
+}
+
+.footer-navigation h2,
+.footer-contact h2 {
+    font-size:18px;
+}
+
+.footer-navigation {
+    text-align:left;
+    animation: slideInFromRight 2s;
+}
+
+.footer-navigation ul {
+    list-style:none;
+    padding:0;
+    display:grid; 
+    grid-template-columns:repeat(2, auto); 
+    grid-template-rows:repeat(4, auto); 
+    gap:15px; 
+}
+
+.footer-navigation li {
+    margin-bottom:10px;
+}
+
+.footer-navigation a {
+    text-decoration:none;
+    color:wheat; 
+    font-size:14px;
+    transition:color .3s ease;
+}
+
+.footer-navigation a:hover {
+    color:#ff9900; 
+}
+
+.footer-contact p {
+font-size:14px;
+margin-bottom:10px;
+}
+
+.social-media-icons {
+display:flex; 
+justify-content:left; 
+gap:20px; 
+animation: fadeIn 2s;
+}
+
+.social-media-icons a img {
+width:30px;
+height:30px;
+}
+
+.social-media-icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease; /* Add a transition effect */
+}
+
+.social-media-icons a:hover img {
+  transform: scale(1.2); /* Scale the image up on hover */
+  color: wheat;
+}
